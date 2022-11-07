@@ -1,0 +1,44 @@
+	<head>
+		<link href=Exercise2.css rel="stylesheet" type=text/css>
+		<title>Slide Show</title>
+		<h1>Slide Show of My Favorite Tennis Players!</h1>
+	</head>
+	<body align="center">
+	<br>
+	<img id="slide" src="https://olympics.nbcsports.com/wp-content/uploads/sites/10/2021/07/GettyImages-1233820699-e1625515404823.jpg" height="200" width="400"><br>
+	<p id="person1" hidden>Roger Federer</p>
+	<p id="person2"hidden>Novak Djokovic</p>
+	<p id="person3"hidden>Rafael Nadal</p>
+	<p id="person4"hidden>Andy Murray</p>
+	<p id="person5"hidden>Daniil Medvedev</p><br>	
+	<button class="button" type="button" onclick="prev()">Previous</button>
+	<button class="button" type="button" onclick="next()">Next</button>
+
+	<script type="text/javascript">
+	
+            const images = ["https://olympics.nbcsports.com/wp-content/uploads/sites/10/2021/07/GettyImages-1233820699-e1625515404823.jpg","https://www.atptour.com/en/news/www.atptour.com/-/media/images/news/2022/11/03/19/23/djokovic-paris-2022-thursday-backhand-air.jpg", "https://www.atptour.com/-/media/images/news/2022/11/03/00/27/nadal-paris-2022-wednesday.jpg","https://i2-prod.walesonline.co.uk/incoming/article24349488.ece/ALTERNATES/s615/0_GettyImages-1405487280.jpg", "https://www.atptour.com/-/media/images/news/2022/10/29/13/31/medvedev-vienna-2022-saturday.jpg"];
+	    
+	    function prev(){
+                var image = document.getElementById("slide");
+                if (images.indexOf(image.src) == 0){
+                    image.src = images[4];
+		    Daniil();
+                } else {
+                    image.src = images[images.indexOf(image.src) - 1];
+		    
+                }
+            }
+            function next(){
+                var image = document.getElementById("slide");
+                if (images.indexOf(image.src) == 4){
+                    image.src = images[0];
+		    document.getElementById("person").style.display = names[0]
+                } else {
+                    image.src = images[images.indexOf(image.src) + 1];
+		    document.getElementById("person").style.display = names[images.indexOf(image.src +1)];
+                }
+            }
+	</script>
+	</body>
+	</html>
+

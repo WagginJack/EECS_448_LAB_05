@@ -1,0 +1,28 @@
+<script type="text/javascript">
+
+  function checkForm(form)
+  {
+
+    if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+      if(form.pwd1.value.length < 8) {
+        alert("Error: Password must contain at least eight characters!");
+        form.pwd1.focus();
+        return false;
+        }
+      } 
+      else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.pwd1.focus();
+      return false;
+    }
+
+    alert("You entered a valid password: ");
+  }
+
+</script>
+
+<form>
+<p>Password: <input name="pwd1"></p>
+<p>Confirm Password: <input  name="pwd2"></p>
+<button onclick="checkForm(form)">Validate</button>
+</form>
