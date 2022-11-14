@@ -1,0 +1,40 @@
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.column {
+	float: left;
+	width: 24%;
+	padding: 2px;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+th {
+	background-color: cadetblue;
+}
+
+td {
+	background-color: darkseagreen;
+}
+
+body {
+	font-family: sans-serif;
+	background-color: whitesmoke;
+}
+
+p, small {
+	color: forestgreen;
+}
+
+img:hover {
+	border-style: dashed;
+	transition-duration: 0.25s;
+	border-color: forestgreen;
+}
+
