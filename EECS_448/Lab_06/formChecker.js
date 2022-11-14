@@ -13,7 +13,7 @@ function formValidate() {
 	let shipPass = false;
 
 	let username = document.getElementById("username").value;
-	//Email validation adapted from a StackOverflow answer
+
 	const emailVal = email => {
 		let emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 		return emailReg.test(email);
